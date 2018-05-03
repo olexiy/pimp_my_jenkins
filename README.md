@@ -10,3 +10,10 @@ And then my docker container.
 Jenkins Plugin Export :
 JENKINS_HOST=username:password@myhost.com:port
 curl -sSL "http://$JENKINS_HOST/pluginManager/api/xml?depth=1&xpath=/*/*/shortName|/*/*/version&wrapper=plugins" | perl -pe +).*?<version>+/\1 \2\n/g'
+
+Run just bare jenkins/blueocean docker image : 
+docker run -p 8080:8080 -p 50000:50000
+
+Build pymp-my-jenkins image:
+cd Jenkins 
+docker build -t pimp-my-jenkins .
