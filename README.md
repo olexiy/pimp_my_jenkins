@@ -53,6 +53,9 @@ Your docker image must be visible in the container list.
 Jenkins to GitHub Organisation integration:
 Plugin is already installed. Just create new item as a "GitHub Organisation". Create new GitHub credentials as a
  "username and password" and putting as the password GitHub access token. Change Owners name to your GitHub Login.
+ 
+ Dockerhub integration: 
+ Create a new Credential 
 
 TODO: 
 + extend groovy script to add tools installation for maven and jdk - [help](https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console)
