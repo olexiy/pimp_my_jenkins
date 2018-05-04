@@ -43,6 +43,17 @@ Your docker image must be visible in the container list.
 
 [Pipeline Maven Plugin](https://wiki.jenkins.io/display/JENKINS/Pipeline+Maven+Plugin)
 
+[Declarative Pipelines Docu](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline)
+
+[Declarative Pipeline for Maven Projects ](https://jenkins.io/blog/2017/02/07/declarative-maven-project/)
+
+[Jenkins 2 Cookbook](https://www.packtpub.com/mapt/book/networking_and_servers/9781788297943/1)
+
+
+Jenkins to GitHub Organisation integration:
+Plugin is already installed. Just create new item as a "GitHub Organisation". Create new GitHub credentials as a
+ "username and password" and putting as the password GitHub access token. Change Owners name to your GitHub Login.
+
 TODO: 
 + extend groovy script to add tools installation for maven and jdk - [help](https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console)
 + drop initialAdminPassword into the script log
