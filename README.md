@@ -27,7 +27,15 @@ Following Plugins are installed additionally:
 
 Testing Docker availability from the Jenkins:
 > docker exec -it jenkins bush
+
 > docker ps -a
+
+Pushing new version of the jenkins to the dockerhub:
+> docker login
+
+> docker build -t olexiy/jenkins-with-docker .
+
+> docker push  olexiy/jenkins-with-docker
 
 Your docker image must be visible in the container list.
 
@@ -35,4 +43,6 @@ Your docker image must be visible in the container list.
 
 [Pipeline Maven Plugin](https://wiki.jenkins.io/display/JENKINS/Pipeline+Maven+Plugin)
 
-TODO: extend groovy script to add tools installation for maven and jdk - [help](https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console)
+TODO: 
++ extend groovy script to add tools installation for maven and jdk - [help](https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console)
++ drop initialAdminPassword into the script log
