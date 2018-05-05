@@ -8,8 +8,7 @@ apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
 apt-get update
 apt-get install -y docker-engine
 systemctl enable docker
-systemctl start docker
-usermod -a -G docker jenkins
+systemctl start dockes
 
 # run jenkins
 mkdir -p /var/jenkins_home
