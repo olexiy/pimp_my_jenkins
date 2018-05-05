@@ -4,31 +4,19 @@ in the current version and with the Plugins and configurations I need. This buil
 
 Basis for this build is a [Latest version of the Jenkins Docker container](https://hub.docker.com/r/jenkins/jenkins/)
 
-
-
 Jenkins Plugin Export :
 JENKINS_HOST=username:password@myhost.com:port
 curl -sSL "http://$JENKINS_HOST/pluginManager/api/xml?depth=1&xpath=/*/*/shortName|/*/*/version&wrapper=plugins" | perl -pe 's/.*?<shortName>([\w-]+).*?<version>+/\1 \2\n/g'
 
-
-Build pymp-my-jenkins image:
-cd Jenkins 
-docker build -t pimp-my-jenkins .
-
 Following Plugins are installed additionally: 
 + docker-build-publish
 + pipeline-maven
-
 + email-ext
 + artifactory
 + slack
 + sonar
 + blueocean
 
-Testing Docker availability from the Jenkins:
-> docker exec -it jenkins bash
-
-> docker ps -a
 
 Pushing new version of the jenkins to the dockerhub:
 > docker login
@@ -37,7 +25,13 @@ Pushing new version of the jenkins to the dockerhub:
 
 > docker push  olexiy/jenkins-with-docker
 
+Testing Docker availability from the Jenkins:
+> docker exec -it jenkins bash
+
+> docker ps -a
+
 Your docker image must be visible in the container list.
+
 
 [Job DSL API Dokumentation](https://jenkinsci.github.io/job-dsl-plugin/)
 
@@ -51,6 +45,7 @@ Your docker image must be visible in the container list.
 
 
 Jenkins to GitHub Organisation integration:
+
 Plugin is already installed. Just create new item as a "GitHub Organisation". Create new GitHub credentials as a
  "username and password" and putting as the password GitHub access token. Change Owners name to your GitHub Login.
  
