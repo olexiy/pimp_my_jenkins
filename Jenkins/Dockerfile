@@ -13,6 +13,7 @@ RUN mkdir -p /tmp/download && \
  rm -rf /tmp/download
 RUN groupadd -g 999 docker
 RUN usermod -a -G staff,docker jenkins
-RUN apt-get install -y rsync
+RUN chown root:docker /var/run/docker.sock
+RUN chmod g+rwx /var/run/docker.sock
 
 USER jenkins
