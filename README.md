@@ -26,7 +26,7 @@ Following Plugins are installed additionally:
 + blueocean
 
 Testing Docker availability from the Jenkins:
-> docker exec -it jenkins bush
+> docker exec -it jenkins bash
 
 > docker ps -a
 
