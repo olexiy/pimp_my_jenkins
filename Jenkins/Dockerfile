@@ -12,7 +12,7 @@ COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 
 # Install docker and configure access rights to access the host system docker ower the socket
 RUN mkdir -p /tmp/download && \
- curl -L https://get.docker.com/builds/Linux/x86_64/docker-17.05.0-ce.tgz | tar -xz -C /tmp/download && \
+ curl -L https://download.docker.com/linux/static/stable/x86_64/docker-18.03.1-ce.tgz | tar -xz -C /tmp/download && \
  rm -rf /tmp/download/docker/dockerd && \
  mv /tmp/download/docker/docker* /usr/local/bin/ && \
  rm -rf /tmp/download && \
